@@ -4,44 +4,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="description" content="Pusat Informasi Mahasiswa">
+  <meta name="keywords" content="Mahasiswa, Informasi, Kampus">
+  <meta name="author" content="Nuryaman">
+  <title>Pusat Informasi Mahasiswa</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/polyfills.umd.js"></script>
   <script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+
 </head>
 
 <body>
   <!-- Navbar Start -->
   <header>
-    <Nav class="navbar ">
-      <img src="img/logo.png" width="50px">
-      <!-- <a href="" class="navbar-Logo">PI<span>M</span></a> -->
+    <nav class="navbar">
+      <img src="img/logo.png" width="50px" alt="Logo PIM">
       <div class="navbar-nav">
         <a href="#home">Beranda</a>
-        <a href="#about">Informasi</a>
-        <a href="#menu">Event</a>
+        <a href="#informasi">Informasi</a>
+        <a href="#event">Event</a>
         <a href="#tentang">Tentang</a>
-        <a href="#contack">Alamat</a>
-        <!-- <a href="#contack">layanan</a> -->
-        <!-- <a href="#contack">kontak</a> -->
-        <!-- <a href="#contack">Tentang</a> -->
+        <a href="#contact">Alamat</a>
       </div>
       <div class="navbar-extra">
-        <!-- <a href="" id="search"><i data-feather="search"></i></a>
-        <a href="" id="shopping-cart"><i data-feather="shopping-bag"></i></a> -->
         <div id="hamburger-menu"><i data-feather="menu"></i></div>
       </div>
-    </Nav>
+    </nav>
   </header>
   <!-- Navbar End -->
 
   <main>
-    <section class="hiro" id="home">
+    <section class="hero" id="home">
       <div class="content">
         <h1>Selamat Datang di PI<span>M</span></h1>
-        <p>Pusat Informasi mahasiswa</p>
-        <a href="#about">
+        <p>Pusat Informasi Mahasiswa</p>informasi
+        <a href="#informasi">
           <button class="cta">
-            <span>info terbaru</span>
+            <span>Info Terbaru</span>
             <svg width="15px" height="10px" viewBox="0 0 13 10">
               <path d="M1,5 L11,5"></path>
               <polyline points="8 1 12 5 8 9"></polyline>
@@ -50,40 +50,44 @@
         </a>
       </div>
       <div>
-        <img src="img/logo.png" alt="">
+        <img src="img/logo.png" alt="Logo PIM">
       </div>
     </section>
-    <!-- about Section -->
-    <section id="about" class="about">
+
+    <section id="informasi" class="informasi">
       <h2>Informasi <span>Terbaru</span></h2>
       <div class="row">
-        <div class="about-img">
+        <div class="informasi-img">
           <img src="./img/BEM.png" alt="Tentang Kami">
         </div>
         <div class="content">
           <h3>Dilantiknya Ketua BEM 2024/2025</h3>
-          <p>
-            Telah dipilih sebagai Ketua Badan Eksekutif Mahasiswa (BEM) saudara Faisal untuk masa bakti mendatang, yang akan
-            bersama-sama ditemani oleh sosok yang sama-sama luar biasa, Flora, sebagai Wakil Ketua. Tidak hanya sekedar
-            pemimpin, mereka adalah representasi dari harapan dan aspirasi mahasiswa seluruhnya, yang mempercayakan
-            mereka untuk memimpin dengan integritas, dedikasi, dan keberanian.
+          <p>Telah dipilih sebagai Ketua Badan Eksekutif Mahasiswa (BEM) saudara Faisal untuk masa bakti mendatang, yang
+            akan bersama-sama ditemani oleh sosok yang sama-sama luar biasa, Flora, sebagai Wakil Ketua. Tidak hanya
+            sekedar pemimpin, mereka adalah representasi dari harapan dan aspirasi mahasiswa seluruhnya, yang
+            mempercayakan mereka untuk memimpin dengan integritas, dedikasi, dan keberanian.</p>
+          <!-- Tambahkan atribut onclick pada button -->
+          <!-- <button class="button" style="vertical-align:middle" onclick="downloadPDF()"><span>Download</span></button> -->
+          <!-- <button onclick="previewPDF()">Preview PDF</button> -->
+          <button id="print">Print PDF</button>
+          <div id="pdf-preview-container"></div>
+
         </div>
       </div>
     </section>
-    <!-- MenuSection -->
-    <section id="menu" class="menu">
+
+    <!-- Event Section -->
+    <section id="event" class="event">
       <h2>Event <span>Terbaru</span></h2>
-      <p>kegiatan dan acara dari berbagai organisasi mahasiswa di kampus
-      </p>
+      <p>Kegiatan dan acara dari berbagai organisasi mahasiswa di kampus</p>
       <div class="row">
-        <div class="menu-card">
-          <img src="./img/hima.jpg" alt="Espresso" class="menu-card-img">
-          <p class="menu-card-price">Penerimaan Calon anggota Baru</p>
-          <h3 class="menu-card-title">Deadline Pendaftaran: 18 April 2024 </h3>
-          <h3 class="menu-card-title"><a href="https://www.instagram.com/p/C5s_GBAS1Xw/?igsh=MTdzaXE1OTJvY2s1Mw=="
-              target="_blank">HIMA
-              IF</a></h3>
-          <a href="#about">
+        <div class="event-card">
+          <img src="./img/hima.jpg" alt="HIMA" class="event-card-img">
+          <p class="event-card-judul">Penerimaan Calon Anggota Baru</p>
+          <h3 class="event-card-title">Deadline Pendaftaran: 18 April 2024</h3>
+          <h3 class="event-card-title"><a href="https://www.instagram.com/p/C5s_GBAS1Xw/?igsh=MTdzaXE1OTJvY2s1Mw=="
+              target="_blank">HIMA IF</a></h3>
+          <a href="#informasi">
             <button class="cta">
               <span>Daftar</span>
               <svg width="15px" height="10px" viewBox="0 0 13 10">
@@ -93,14 +97,13 @@
             </button>
           </a>
         </div>
-        <div class="menu-card">
-          <img src="./img/webinar.jpg" alt="Espresso" class="menu-card-img">
-          <p class="menu-card-price">Webinar Halal Bihalal</p>
-          <h3 class="menu-card-title">Deadline Pendaftaran: 18 April 2024 </h3>
-
-          <h3 class="menu-card-title"><a href="https://www.instagram.com/p/C6EM6IpRU72/?igsh=MTl6N2NsZmV2b2RuYQ=="
+        <div class="event-card">
+          <img src="./img/webinar.jpg" alt="Webinar" class="event-card-img">
+          <p class="event-card-judul">Webinar Halal Bihalal</p>
+          <h3 class="event-card-title">Deadline Pendaftaran: 18 April 2024</h3>
+          <h3 class="event-card-title"><a href="https://www.instagram.com/p/C6EM6IpRU72/?igsh=MTl6N2NsZmV2b2RuYQ=="
               target="_blank">HIMA SI</a></h3>
-          <a href=" #about">
+          <a href="#informasi">
             <button class="cta">
               <span>Daftar</span>
               <svg width="15px" height="10px" viewBox="0 0 13 10">
@@ -110,15 +113,13 @@
             </button>
           </a>
         </div>
-        <div class="menu-card">
-          <img src="./img/adbis.jpg" alt="Espresso" class="menu-card-img">
-          <p class="menu-card-price">Penerimaan Calon anggota Baru</p>
-          <h3 class="menu-card-title">Deadline Pendaftaran: 18 April 2024 </h3>
-
-          <h3 class="menu-card-title"><a href="
-              https://www.instagram.com/p/C39UQHYR-Gm/?igsh=MXRyaGh6b2hwbGV5aw%3D%3D" target=" _blank">HIMA Adbis
-            </a></h3>
-          <a href=" #about">
+        <div class="event-card">
+          <img src="./img/adbis.jpg" alt="HIMA Adbis" class="event-card-img">
+          <p class="event-card-judul">Penerimaan Calon Anggota Baru</p>
+          <h3 class="event-card-title">Deadline Pendaftaran: 18 April 2024</h3>
+          <h3 class="event-card-title"><a href="https://www.instagram.com/p/C39UQHYR-Gm/?igsh=MXRyaGh6b2hwbGV5aw=="
+              target="_blank">HIMA Adbis</a></h3>
+          <a href="#informasi">
             <button class="cta">
               <span>Daftar</span>
               <svg width="15px" height="10px" viewBox="0 0 13 10">
@@ -130,76 +131,50 @@
         </div>
       </div>
     </section>
+
     <section id="tentang" class="tentang">
-      <img src="img/logo.png">
+      <img src="img/logo.png" alt="Logo PIM">
       <h2>Latar <span>Belakang</span></h2>
       <p>Pusat Informasi Mahasiswa (PIM) didirikan sebagai respon terhadap kebutuhan mahasiswa untuk memiliki akses yang
         mudah dan terkini terhadap informasi yang berkaitan dengan kegiatan akademik, organisasi, acara, dan layanan
         kampus. Sebagai jembatan antara mahasiswa dan sumber daya kampus, PIM hadir dengan tujuan memberikan kontribusi
         positif dalam pengembangan mahasiswa sebagai individu yang berpengetahuan luas, terampil, dan terhubung dengan
-        komunitas kampus.
-      </p>
-      <!-- <BR></BR>
-      <h2><span>VISI</span></h2>
-      <p>"Menjadi Pusat Informasi Unggulan yang Mendorong Mahasiswa Menuju Prestasi dan Kebanggaan Bersama."
-      </p>
-      <h2><span>MISI</span></h2>
-      <p>Menyediakan Informasi Terkini: Menyajikan informasi terkini dan akurat tentang kegiatan akademik, organisasi,
-        event, dan layanan kampus kepada mahasiswa.
-        Memfasilitasi Keterlibatan Mahasiswa: Mendorong keterlibatan aktif mahasiswa dalam berbagai kegiatan akademik
-        dan ekstrakurikuler yang diadakan di lingkungan kampus.
-        Membangun Jaringan Komunitas: Membangun jaringan komunitas yang kuat antara mahasiswa, dosen, dan pihak-pihak
-        terkait untuk mendukung pertukaran ide dan kolaborasi yang produktif.
-      </p> -->
-
+        komunitas kampus.</p>
     </section>
-    <section id="contack" class="contack">
+
+    <section id="contact" class="contact">
       <h2>Alamat<span> Kampus</span></h2>
-      <!-- <p>Silahkan mengunjungi alamat ini jika ada keperluan</p> -->
       <div class="row">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.503943486058!2d107.62463440000002!3d-6.949725799999991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e869cd808345%3A0xc57998e8efb4bab1!2sInstitut%20Digital%20Ekonomi%20LPKIA%20Bandung!5e0!3m2!1sid!2sid!4v1708235145401!5m2!1sid!2sid"
           allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
-        <p><i>Alamat: Jl. Soekarno Hatta No.456, Batununggal, Kec. Bandung Kidul, Kota Bandung, Jawa Barat 40266
-          </i></p>
-        <!-- <form action="">
-          <div class="input-grup">
-            <i data-feather="user"></i>
-            <input type="text" placeholder="Masukan nama">
-          </div>
-          <div class="input-grup">
-            <i data-feather="mail"></i>
-            <input type="email" placeholder="Masukan email">
-          </div>
-          <div class="input-grup">
-            <i data-feather="phone"></i>
-            <input type="number" placeholder="Nomor HP">
-          </div>
-          <button type="submit" class="btn">Kirim</button>
-        </form> -->
+        <p><i>Alamat: Jl. Soekarno Hatta No.456, Batununggal, Kec. Bandung Kidul, Kota Bandung, Jawa Barat 40266</i></p>
       </div>
     </section>
-
   </main>
-  <footer>
 
+  <footer>
     <div class="links">
       <a href="#home">Beranda</a>
-      <a href="#about">Informasi</a>
-      <a href="#menu">Event</a>
+      <a href="#informasi">Informasi</a>
+      <a href="#event">Event</a>
       <a href="#tentang">Tentang</a>
-      <a href="#contack">Alamat</a>
+      <a href="#contact">Alamat</a>
     </div>
     <div class="credit">
-      <p>Created by <a href="">Nuryaman</a> . &copy;2024</p>
+      <p>Created by <a href="#">Nuryaman</a> . &copy;2024</p>
     </div>
-
   </footer>
 
   <script>
     feather.replace();
   </script>
   <script src="app.js"></script>
+  <!-- Taruh script ini di bagian head atau sebelum tag </body> -->
+  <!-- Taruh script ini di bagian head atau sebelum tag </body> -->
+
+
+
 </body>
 
 </html>
