@@ -1,4 +1,3 @@
-const { jsPDF } = window.jspdf;
 
 const printButton = document.querySelector('#print');
 

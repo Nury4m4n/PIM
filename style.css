@@ -16,12 +16,17 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 100%;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--bg);
   color: black;
+}
+
+section {
+  padding-top: 100px;
 }
 
 /* Navbar */
@@ -326,10 +331,15 @@ About Section */ .informasi,
   text-align: center;
 }
 
+.event .row .event-card-judul {
+  padding-top: 40px;
+}
+
 .event .row .event-card img {
-  border-radius: 50%;
+  /* border-radius: 50%; */
   width: 200px;
   height: 200px;
+
 }
 
 .event .row .event-card .event-card-title {
@@ -341,6 +351,7 @@ About Section */ .informasi,
   display: flex;
   margin-top: 2rem;
   background-color: #2222;
+
 }
 
 .contact .row .map {
@@ -366,13 +377,17 @@ footer .links a:hover {
 }
 
 footer .links a {
-  color: black;
+  color: var(--bg);
   padding: 0.7rem 1rem;
 }
 
 footer .credit a {
   color: var(--bg);
   font-weight: 700;
+}
+
+footer p {
+  color: var(--bg);
 }
 
 /* Media QUeri */
