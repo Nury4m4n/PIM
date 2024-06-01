@@ -8,7 +8,7 @@
   <meta name="keywords" content="Mahasiswa, Informasi, Kampus">
   <meta name="author" content="Nuryaman">
   <title>Pusat Informasi Mahasiswa</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/polyfills.umd.js"></script>
+  <script src="https://raw.githack.com/ekoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
   <script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="/img/logo.webp" type="image/x-icon">
@@ -19,7 +19,7 @@
   <!-- Navbar Start -->
   <header>
     <nav class="navbar">
-      <img src="img/logo.webp" width="50px" alt="Logo PIM">
+      <img src="img/logo.jpeg" width="50px" alt="Logo PIM">
       <div class="navbar-nav">
         <a href="#home">Beranda</a>
         <a href="#informasi">Informasi</a>
@@ -38,7 +38,7 @@
     <section class="hero" id="home">
       <div class="content">
         <h1>Selamat Datang di PI<span>M</span></h1>
-        <p>Pusat Informasi Mahasiswa</p>informasi
+        <p>Pusat Informasi Mahasiswa</p>
         <a href="#informasi">
           <button class="cta">
             <span>Info Terbaru</span>
@@ -50,7 +50,7 @@
         </a>
       </div>
       <div>
-        <img src="img/logo.webp" alt="Logo PIM">
+        <img src="img/logo.jpeg" alt="Logo PIM">
       </div>
     </section>
 
@@ -58,23 +58,20 @@
       <h2>Informasi <span>Terbaru</span></h2>
       <div class="row">
         <div class="informasi-img">
-          <img src="./img/BEM.webp" alt="Tentang Kami">
+          <img src="./img/BEM.jpeg" alt="Tentang Kami">
         </div>
         <div class="content">
           <h3>Dilantiknya Ketua BEM 2024/2025</h3>
-          <p>Telah dipilih sebagai Ketua Badan Eksekutif Mahasiswa (BEM) saudara Faisal untuk masa bakti mendatang, yang
+          <p>Telah dipilih sebagai Ketua Badan Eksekutif Mahasiswa (BEM) saudara Faisal untuk masa bakti mendatang,
+            yang
             akan bersama-sama ditemani oleh sosok yang sama-sama luar biasa, Flora, sebagai Wakil Ketua. Tidak hanya
             sekedar pemimpin, mereka adalah representasi dari harapan dan aspirasi mahasiswa seluruhnya, yang
             mempercayakan mereka untuk memimpin dengan integritas, dedikasi, dan keberanian.</p>
-          <!-- Tambahkan atribut onclick pada button -->
-          <!-- <button class="button" style="vertical-align:middle" onclick="downloadPDF()"><span>Download</span></button> -->
-          <!-- <button onclick="previewPDF()">Preview PDF</button> -->
-          <button id="print">Print PDF</button>
-          <div id="pdf-preview-container"></div>
-
+          <button class="button" onclick="generatePDF()">Download PDF</button>
         </div>
       </div>
     </section>
+
 
     <!-- Event Section -->
     <section id="event" class="event">
@@ -82,7 +79,7 @@
       <p>Kegiatan dan acara dari berbagai organisasi mahasiswa di kampus</p>
       <div class="row">
         <div class="event-card">
-          <img src="./img/hima.webp" alt="HIMA" class="event-card-img">
+          <img src="./img/hima.jpeg" alt="HIMA" class="event-card-img">
           <p class="event-card-judul">Penerimaan Calon Anggota Baru</p>
           <h3 class="event-card-title">Deadline Pendaftaran: 18 April 2024</h3>
           <h3 class="event-card-title"><a href="https://www.instagram.com/p/C5s_GBAS1Xw/?igsh=MTdzaXE1OTJvY2s1Mw=="
@@ -132,7 +129,7 @@
     </section>
 
     <section id="tentang" class="tentang">
-      <img src="img/logo.webp" alt="Logo PIM">
+      <img src="img/logo.jpeg" alt="Logo PIM">
       <h2>Latar <span>Belakang</span></h2>
       <p>Pusat Informasi Mahasiswa (PIM) didirikan sebagai respon terhadap kebutuhan mahasiswa untuk memiliki akses yang
         mudah dan terkini terhadap informasi yang berkaitan dengan kegiatan akademik, organisasi, acara, dan layanan
